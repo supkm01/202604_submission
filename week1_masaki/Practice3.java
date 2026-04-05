@@ -1,0 +1,35 @@
+package week1_masaki;
+
+public class Practice3 {
+
+	public static void main(String[] args) {
+		// 配列の初期化
+		int[] array = {5, 3, 9, 1, 7};
+		// メソッドの呼び出し
+		int max = findMax(array);
+		System.out.println("Maximum value in the array: " + max);
+	}
+	
+	// 最大値を求めるメソッド
+	public static int findMax(int[] arr) {
+		// 最大値の初期値を設定する
+		int max = 0;
+		for (int i = 0; i < arr.length; i++) {
+			// もし、arr[i]の値がmaxの値よりも大きい場合
+			if (arr[i] > max) {
+				// maxの値をarr[i]の値で上書きをしてmaxの値を更新する
+				max = arr[i];
+			}
+		}
+		return max;
+		
+//	    // 配列のすべての要素を順に取り出す
+//	    for (int value : arr) {
+//	        // もし現在の値がmaxより大きければ更新
+//	        if (value > max) {
+//	            max = value;
+//	        }
+//	    }
+	}
+
+}
